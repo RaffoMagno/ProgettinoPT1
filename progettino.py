@@ -30,15 +30,20 @@ def rimuoviElemento(listaSpesa):
 def contaElementi(listaSpesa):
     print(f'Ci sono {len(listaSpesa)} elementi nella lista')
 
+def svuotaLista(listaSpesa):
+    listaSpesa.clear()
+    print("Lista svuotata")
+
 listaSpesa = []
 
 scelta = None
-while scelta != 5:
+while scelta != 6:
     print("\n1 - Aggiungi elemento")
     print("2 - Visualizza lista")
     print("3 - Rimuovi elemento")
     print("4 - Conta elementi")
-    print("5 - Termina programmaa")
+    print("5 - Svuota lista")
+    print("6 - Termina programmaa")
     try:
         scelta = int(input("La tua scelta: "))
     except:
@@ -52,3 +57,5 @@ while scelta != 5:
         rimuoviElemento(listaSpesa)
     elif scelta == 4:  
         contaElementi(listaSpesa)
+    elif scelta == 5:  
+        svuotaLista(listaSpesa)
