@@ -12,7 +12,9 @@ def aggiungiElemento(listaSpesa):
         listaSpesa.append(elemento)
         print("Elemento aggiunto")
 
+def visualizzaLista(listaSpesa):
+    print(listaSpesa)
 
-        
 listaSpesa = []
 aggiungiElemento(listaSpesa)
+visualizzaLista(listaSpesa)
