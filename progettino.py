@@ -28,6 +28,21 @@ def rimuoviElemento(listaSpesa):
     visualizzaLista(listaSpesa)
 
 listaSpesa = []
-aggiungiElemento(listaSpesa)
-visualizzaLista(listaSpesa)
-rimuoviElemento(listaSpesa)
+
+scelta = None
+while scelta != 4:
+    print("1 - Aggiungi elemento")
+    print("2 - Visualizza lista")
+    print("3 - Rimuovi elemento")
+    print("4 - Termina programmaa")
+    try:
+        scelta = int(input("La tua scelta: "))
+    except:
+        print("Inserisci valore numerico")
+
+    if scelta == 1:
+        aggiungiElemento(listaSpesa)
+    elif scelta == 2:
+        visualizzaLista(listaSpesa)
+    elif scelta == 3:  
+        rimuoviElemento(listaSpesa)
