@@ -27,14 +27,18 @@ def rimuoviElemento(listaSpesa):
     listaSpesa.pop(indice)
     visualizzaLista(listaSpesa)
 
+def contaElementi(listaSpesa):
+    print(f'Ci sono {len(listaSpesa)} elementi nella lista')
+
 listaSpesa = []
 
 scelta = None
-while scelta != 4:
-    print("1 - Aggiungi elemento")
+while scelta != 5:
+    print("\n1 - Aggiungi elemento")
     print("2 - Visualizza lista")
     print("3 - Rimuovi elemento")
-    print("4 - Termina programmaa")
+    print("4 - Conta elementi")
+    print("5 - Termina programmaa")
     try:
         scelta = int(input("La tua scelta: "))
     except:
@@ -46,3 +50,5 @@ while scelta != 4:
         visualizzaLista(listaSpesa)
     elif scelta == 3:  
         rimuoviElemento(listaSpesa)
+    elif scelta == 4:  
+        contaElementi(listaSpesa)
